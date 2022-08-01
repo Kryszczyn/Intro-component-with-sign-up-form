@@ -1,0 +1,221 @@
+@import './addons.scss';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $ffamily;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./../images/bg-intro-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $red;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 768px) {
+        &{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr, 1fr;
+            min-height: 25vh;
+        }   
+    }
+    .info__section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 12rem;
+        @media screen and (max-width: 1150px) {
+            &{
+                padding: 6rem;
+            }   
+        }
+        @media screen and (max-width: 900px) {
+            &{
+                padding: 4rem;
+            }   
+        }
+        @media screen and (max-width: 768px) {
+            &{
+                padding: 0 4rem;
+                text-align: center;
+            }   
+        }
+        .info__title{
+            font-size: 3rem;
+            color: #fff;
+            font-weight: $fweightBold;
+            margin-bottom: 2rem;
+            @media screen and (max-width: 768px) {
+                &{
+                    font-size: 2rem;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }   
+            }
+        }
+        .info__description{
+            color: #fff;
+        }
+    }
+    .form__section{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10rem;
+        
+        @media screen and (max-width: 1350px) {
+            &{
+                padding: 8rem;
+            }   
+        }
+        @media screen and (max-width: 1250px) {
+            &{
+                padding: 6rem;
+            }   
+        }
+        @media screen and (max-width: 1250px) {
+            &{
+                padding: 4rem;
+            }   
+        }
+        @media screen and (max-width: 1150px) {
+            &{
+                padding: 2rem;
+            }   
+        }
+        .try__bar{
+            width: 100%;
+            height: 4rem;
+            border-radius: .5rem;
+            background-color: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            -webkit-box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            -moz-box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            .try__info{
+                color: #fff;
+                span{
+                    font-weight: $fweightBolder;
+                    cursor: pointer;
+                }
+            }
+        }
+        .form__container{
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: .5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            -moz-box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            box-shadow: 0px 5px 0px 0px rgba(66, 68, 90, .25);
+            form{
+                width: 100%;
+                height: 100%;
+            }
+            .input__container{
+                width: 100%;
+                position: relative;
+                input{
+                    width: 100%;
+                    height: 4rem;
+                    border-radius: .5rem;
+                    border: 1px solid #ccc;
+                    padding: 0 1rem;
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                    &:focus{
+                        outline: none;
+                        border: solid $blue 2px;
+                    }
+                }
+                .err__icon{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: $red;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    display: none;
+                    &:hover{
+                        background-color: $darkBlue;
+                    }
+                }
+                .err__text{
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 0;
+                    color: $red;
+                    font-size: .75rem;
+                    font-weight: $fweightBolder;
+                    display: none;
+                }
+            }
+            .submit__container{
+                width: 100%;
+                button{
+                    width: 100%;
+                    height: 4rem;
+                    border-radius: .4rem;
+                    border: none;
+                    background-color: $green;
+                    color: #fff;
+                    font-size: 1.25rem;
+                    text-transform: uppercase;
+                    margin-bottom: 2rem;
+                    cursor: pointer;
+                    box-shadow: 0px 5px 0px 0px rgba(56, 204, 140, .25);
+                    transition: .2s;
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+            }
+            .terms-of-service{
+                text-align: center;
+                font-size: .8rem;
+                color: $grayishBlue;
+                span{
+                    color: $red;
+                    font-weight: $fweightBolder;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    a{
+        color: hsl(228, 45%, 44%);
+    }
+}

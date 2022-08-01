@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="info__section">
+      <p class="info__title">Learn to code by watching others</p>
+      <p class="info__description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    <div class="form__section">
+      <div class="try__bar">
+        <p class="try__info"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+      <div class="form__container">
+        <form action="./index.html" method="POST">
+          <div class="input__container">
+            <input type="text" name="fname" id="fname_input" placeholder="First Name"/>
+            <img class="err__icon" src="./images/icon-error.svg" alt="icon-error" />
+            <p class="err__text">First Name cannot be empty</p>
+          </div>
+          <div class="input__container">
+            <input type="text" name="lname" id="lname_input" placeholder="Last Name" />
+            <img class="err__icon" src="./images/icon-error.svg" alt="icon-error" />
+            <p class="err__text">Last Name cannot be empty</p>
+          </div>
+          <div class="input__container">
+            <input type="email" name="email" id="email_input" placeholder="Email Address" />
+            <img class="err__icon" src="./images/icon-error.svg" alt="icon-error" />
+            <p class="err__text">Looks like this is not an email</p>
+          </div>
+          <div class="input__container">
+            <input type="password" name="password" id="password_input" placeholder="Password" />
+            <img class="err__icon" src="./images/icon-error.svg" alt="icon-error" />
+            <p class="err__text">Password Name cannot be empty</p>
+          </div>
+          <div class="submit__container">
+            <button type="submit">claim your free trial</button>
+          </div>
+          <p class="terms-of-service">
+            By clicking the button, you are agreeing to our <span>Terms and Services</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+
+  <script src="./style/main.js"></script>
+</body>
+</html>
